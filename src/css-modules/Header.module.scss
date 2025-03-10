@@ -1,0 +1,56 @@
+@import "../colors.scss";
+@import "../mixin.scss";
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  @include flex(column, 6.25rem);
+  margin-bottom: 6rem;
+  padding-inline: 1.25rem;
+
+  .upperheader {
+    @include text(3rem, 3.5rem, 600, $white, $shadow);
+    text-align: center;
+  }
+
+  .main {
+    @include flex(column, 6rem, center);
+
+    & .headings {
+      @include flex(column, 2rem);
+
+      & .badge {
+        @include text(1.5rem, 1.5rem, 400, $secondary, $bgcolor: $black, $radius: 999px);
+        box-shadow: $button-shadow;
+        width: fit-content;
+        padding: 1rem 2rem;
+      }
+      & .header {
+        @include text(5.5rem, 5.5rem, 800, $primary, $shadow, $align: center);
+        text-transform: uppercase;
+      }
+      & .underheader {
+        @include text(2.5rem, 2.5rem, 500, $white, $shadow, $align: center);
+      }
+      & .desc {
+        @include text(1.5rem, 1.5rem, 400, $white, $shadow, $align: center);
+      }
+    }
+
+    & .button {
+      @include text(1.25rem, 1.25rem, 600, $black, $bgcolor: $secondary, $radius: 999px, $align: center);
+      @include flex(row, 0.5rem, center);
+      width: fit-content;
+      padding: 2rem 3rem;
+      border: none;
+      box-shadow: $button-shadow;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: .3s ease-in;
+
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+}

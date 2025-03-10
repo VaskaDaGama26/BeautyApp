@@ -1,0 +1,18 @@
+@mixin text($size, $line, $weight, $color: null, $textshadow: null, $bgcolor: null, $radius: null, $align: null) {
+  font-size: $size;
+  line-height: $line;
+  font-weight: $weight;
+  @if $color != null {color: $color;}
+  @if $textshadow != null {text-shadow: $textshadow;}
+  @if $bgcolor != null {background-color: $bgcolor;}
+  @if $radius != null {border-radius: $radius;}
+  @if $align != null {text-align: $align;}
+}
+
+@mixin flex($direction, $gap: null, $align: null, $justify: null) {
+    display: flex;
+    flex-direction: $direction;
+    @if $gap != null {gap: $gap;}
+    @if $align != null {align-items: $align;}
+    @if $justify != null {justify-content: $justify;}
+}

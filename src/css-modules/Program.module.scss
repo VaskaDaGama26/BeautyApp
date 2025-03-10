@@ -1,0 +1,51 @@
+@import "../colors.scss";
+@import "../mixin.scss";
+
+.container {
+  @include flex(column, 2rem, center);
+  width: 100%;
+  height: 860px;
+  background-color: $black75;
+  padding-top: 4rem;
+
+  & .list {
+    @include flex(column, 1rem);
+    counter-reset: index;
+    width: 1000px;
+    margin: 0 auto;
+
+    .item {
+      @include text(1.5rem, 2rem, 200, $textshadow: $shadow);
+      @include flex(row, 2rem, $align: center);
+      list-style-type: none;
+      counter-increment: index;
+
+      background: linear-gradient(to bottom, $white, $gray);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+
+      &::before {
+        @include text(3rem, 3rem, 600, $textshadow: $shadow, $align: center);
+        @include flex(row, $align: center, $justify: center);
+        width: 65px;
+        content: counters(index, ".", decimal-leading-zero);
+        
+
+        background: linear-gradient(to bottom, $white, $primary);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+    }
+
+    & .divider {
+      width: 100%;
+      border-bottom: 1px solid $primary;
+    }
+    & .topic {
+      width: 100%;
+      border-bottom: 1px solid $secondary;
+    }
+  }
+}

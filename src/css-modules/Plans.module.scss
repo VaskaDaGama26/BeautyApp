@@ -1,0 +1,74 @@
+@import "../colors.scss";
+@import "../mixin.scss";
+
+.container {
+  @include flex(column, 3rem, center);
+  height: 860px;
+
+  & .row {
+    @include flex(row, 6.25rem, stretch, center);
+
+    & .plan {
+      width: 600px;
+      @include flex(column, 1.5rem, center, space-between);
+      padding: 3rem 2rem;
+      border-radius: 2rem;
+
+      & .headings {
+        @include flex(column, 2rem, center, center);
+
+        & .name {
+          @include text(2.5rem, 3rem, 900, $black, $align: center);
+          text-transform: uppercase;
+        }
+        & .pricing {
+          @include flex(column, 0.5rem, center, center);
+
+          & .price {
+            @include text(2.5rem, 3rem, 600, $black, $align: center);
+          }
+          & .alert {
+            @include text(0.75rem, 1rem, 400, $black, $align: center);
+          }
+        }
+      }
+
+      & .list {
+        @include text(1rem, 2rem, 400);
+        padding: 0;
+        & .item__black {
+            font-weight: 700;
+        }
+      }
+      & .list__sub {
+        padding-left: 1rem;
+        & .item__sub__black {
+            font-weight: 700;
+        }
+      }
+
+      & .button {
+        cursor: pointer;
+        padding: 1rem 2rem;
+        background-color: $black;
+        border: none;
+        @include text(1.5rem, 1.5rem, 600, $white, $align: center);
+        text-transform: uppercase;
+        transition: 0.3s ease-in;
+
+        &:hover {
+          scale: 1.01;
+          box-shadow: $shadow;
+        }
+      }
+    }
+
+    & .camp {
+        background-color: $primary;
+    }
+    & .desert {
+        background-color: $secondary;
+    }
+
+  }
+}

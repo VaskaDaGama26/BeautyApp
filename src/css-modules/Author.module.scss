@@ -1,0 +1,47 @@
+@import "../colors.scss";
+@import "../mixin.scss";
+
+.container {
+  @include flex(column, 2.5rem, center);
+  height: 660px;
+
+  & .headings {
+    @include flex(column, 0.5rem, center);
+
+    & .name {
+      @include text(2.5rem, 3rem, 500, $white, $shadow);
+    }
+  }
+  & .row {
+    @include flex(row, 6rem, center, center);
+
+    & .image {
+      img {
+        height: 412px;
+        box-shadow: $shadow;
+      }
+    }
+    & .block {
+      @include flex(column, 2rem, flex-start);
+
+      & .badge {
+        @include text(1rem, 1.25rem, 500, $primary, $align: center);
+        background-color: $black75;
+        padding: 1rem 2rem;
+        border-radius: 3rem;
+        width: 90%;
+      }
+      & .list {
+        width: 600px;
+        padding-left: 1rem;
+
+        & .item {
+          @include text(1.25rem, 1.5rem, 600, $white, $shadow);
+        }
+        & .highlight {
+          color: $primary;
+        }
+      }
+    }
+  }
+}

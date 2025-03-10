@@ -1,0 +1,41 @@
+@import "../colors.scss";
+@import "../mixin.scss";
+
+.container {
+  max-width: 1440px;
+  height: 860px;
+  margin: 0 auto;
+  @include flex(column, 2rem, center, center);
+  margin-bottom: 6rem;
+  padding-inline: 1.25rem;
+
+  & .headers {
+    @include flex(column, $align: center);
+
+    & .text__first {
+      @include text(1.5rem, 2rem, 800, $primary, $shadow, $align: center);
+    }
+    & .text_second {
+      @include text(1.5rem, 2rem, 400, $primary, $shadow, $align: center);
+    }
+  }
+
+  & .row {
+    @include flex(column, 6rem, center);
+
+    & .jointext {
+      @include text(2.5rem, 3.5rem, 500, $white, $shadow, $align: center);
+    }
+    & .list {
+      margin: 4rem 4.5rem 0;
+      padding-inline: 7.5rem;
+
+      & .item {
+        @include text(2rem, 2.5rem, 600, $white, $shadow, $align: left);
+      }
+      & .highlight {
+        color: $primary;
+      }
+    }
+  }
+}
