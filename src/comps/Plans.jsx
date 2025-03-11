@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Heading from "../UI/Heading";
 import classes from "../css-modules/Plans.module.scss";
+import Modal from "../UI/Modal";
 
 const Plans = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+    document.body.classList.add('no-scroll');
+    
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    document.body.classList.remove('no-scroll');
+  };
+
   return (
     <div id="plans" className={classes.container}>
       {Heading("Тарифы")}
@@ -39,7 +53,8 @@ const Plans = () => {
             </li>
             <li className={classes.item}>Есть рассрочка</li>
           </ul>
-          <button className={classes.button}>Купить</button>
+          <button onClick={openModal} className={classes.button}>Купить</button>
+          <Modal show={showModal} onClose={closeModal} />
         </div>
         <div className={`${classes.plan} ${classes.desert}`}>
           <div className={classes.headings}>
@@ -64,7 +79,8 @@ const Plans = () => {
             </li>
             <li className={classes.item}>Есть рассрочка</li>
           </ul>
-          <button className={classes.button}>Купить</button>
+          <button onClick={openModal} className={classes.button}>Купить</button>
+          <Modal show={showModal} onClose={closeModal} />
         </div>
       </div>
     </div>

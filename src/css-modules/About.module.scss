@@ -3,7 +3,9 @@
 
 .container {
   @include flex(column, 2rem, center);
-  height: 860px;
+  height: fit-content;
+  padding-top: 6rem;
+  margin-bottom: 6rem;
 
   & .row {
     @include flex(row, 4rem, center);
@@ -24,7 +26,7 @@
           z-index: 1;
         }
         & .badge {
-        @include flex(row, 0rem, center, center);
+          @include flex(row, 0rem, center, center);
           border-radius: 0 999px 999px 0;
           height: 5.5rem;
           width: 5.5rem;
@@ -35,9 +37,77 @@
       }
     }
     & .block__img {
-        & img {
-            height: 632px;
+      & img {
+        height: 632px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    & .row {
+      @include flex(column, 2rem, center);
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .container {
+    & .row {
+      & .block__list {
+        width: 400px;
+        & .wrapper {
+          & .item {
+            @include text(1rem, 1.5rem, 400, $white, $shadow, $black75, 999px);
+          }
         }
+      }
+      & .block__img {
+        img {
+          height: 532px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    & .row {
+      & .block__list {
+        width: 300px;
+        padding: 0;
+        & .wrapper {
+          & .item {
+            height: 56px;
+            padding-left: 3.75rem;
+            @include text(
+              0.75rem,
+              1.25rem,
+              400,
+              $white,
+              $shadow,
+              $black75,
+              999px
+            );
+          }
+          & .badge {
+            width: 3.5rem;
+            height: 3.5rem;
+
+            img {
+              width: 25px;
+              height: 25px;
+            }
+          }
+        }
+      }
+      & .block__img {
+        img {
+          height: 360px;
+        }
+      }
     }
   }
 }

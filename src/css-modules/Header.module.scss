@@ -20,7 +20,14 @@
       @include flex(column, 2rem);
 
       & .badge {
-        @include text(1.5rem, 1.5rem, 400, $secondary, $bgcolor: $black, $radius: 999px);
+        @include text(
+          1.5rem,
+          1.5rem,
+          400,
+          $secondary,
+          $bgcolor: $black,
+          $radius: 999px
+        );
         box-shadow: $button-shadow;
         width: fit-content;
         padding: 1rem 2rem;
@@ -38,7 +45,15 @@
     }
 
     & .button {
-      @include text(1.25rem, 1.25rem, 600, $black, $bgcolor: $secondary, $radius: 999px, $align: center);
+      @include text(
+        1.25rem,
+        1.25rem,
+        600,
+        $black,
+        $bgcolor: $secondary,
+        $radius: 999px,
+        $align: center
+      );
       @include flex(row, 0.5rem, center);
       width: fit-content;
       padding: 2rem 3rem;
@@ -46,10 +61,88 @@
       box-shadow: $button-shadow;
       text-transform: uppercase;
       cursor: pointer;
-      transition: .3s ease-in;
+      transition: 0.3s ease-in;
 
       &:hover {
         background-color: $primary;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    & .upperheader {
+      @include text(2rem, 2.5rem, 600, $white, $shadow);
+    }
+    & .main {
+      & .headings {
+        & .header {
+          @include text(3.5rem, 3.5rem, 800, $primary, $shadow, $align: center);
+        }
+        & .underheader {
+          @include text(1.5rem, 2rem, 600, $white, $shadow);
+        }
+        & .desc {
+          @include text(1rem, 1rem, 400, $white, $shadow, $align: center);
+        }
+      }
+      & .button {
+        @include text(
+          1rem,
+          1rem,
+          600,
+          $black,
+          $bgcolor: $secondary,
+          $radius: 999px,
+          $align: center
+        );
+        padding: 1.5rem 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .container {
+    & .upperheader {
+      @include text(1.5rem, 2rem, 600, $white, $shadow);
+    }
+    & .main {
+      gap: 3rem;
+      & .headings {
+        & .badge {
+          @include text(
+            1rem,
+            1rem,
+            400,
+            $secondary,
+            $bgcolor: $black,
+            $radius: 999px
+          );
+          padding: 0.75rem 1.5rem;
+        }
+        & .header {
+          @include text(2.5rem, 2.5rem, 800, $primary, $shadow, $align: center);
+        }
+        & .underheader {
+          @include text(1rem, 1.5rem, 600, $white, $shadow);
+        }
+        & .desc {
+          @include text(0.75rem, 0.75rem, 400, $white, $shadow, $align: center);
+        }
+      }
+      & .button {
+        @include text(
+          0.75rem,
+          0.75rem,
+          600,
+          $black,
+          $bgcolor: $secondary,
+          $radius: 999px,
+          $align: center
+        );
+        padding: 1rem 1.5rem;
       }
     }
   }

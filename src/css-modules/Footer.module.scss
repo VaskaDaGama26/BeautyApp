@@ -3,8 +3,10 @@
 
 .container {
   @include flex(row, 0rem, flex-end, space-around);
+  padding: 4rem 0 2rem;
+
   & .left {
-    width: 800px;
+    width: min(800px, 80%);
     @include flex(column, 0.5rem, flex-start, flex-end);
 
     background: linear-gradient(to bottom, $white, $gray);
@@ -83,5 +85,27 @@
         position: relative;
       }
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    @include flex(column, 0.5rem, stretch, space-around);
+    padding: 2rem;
+
+    & .left {
+      & .docs {
+        flex-direction: column;
+        & .row {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
   }
 }

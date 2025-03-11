@@ -3,7 +3,10 @@
 
 .container {
   @include flex(column, 2rem, center, center);
-  height: 860px;
+  margin-bottom: 8rem;
+  height: fit-content;
+  padding: 8rem 0;
+
   .block {
     width: 100%;
     background-color: $black75;

@@ -23,7 +23,7 @@ const Footer = () => {
       </div>
       <div className={classes.right}>
         <h3 className={classes.label}>Дизайн и разработка сайта: </h3>
-        <a className={classes.logo__wrapper} href="https://t.me/vaskadagamaa26">
+        <a className={classes.logo__wrapper} href="https://t.me/vaskadagamaa26" target="_blank">
           <img
             src={logo}
             alt="Developer - Vasiliy Kirichenko"

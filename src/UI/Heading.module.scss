@@ -1,7 +1,13 @@
-@import '../colors.scss';
-@import '../mixin.scss';
+@import "../colors.scss";
+@import "../mixin.scss";
 
 .header {
-    @include text(3rem, 3rem, 600, $primary, $shadow, $align: center);
-    text-transform: uppercase;
+  @include text(3rem, 3rem, 600, $primary, $shadow, $align: center);
+  text-transform: uppercase;
+}
+
+@media (max-width: 500px) {
+  .header {
+    @include text(2rem, 2rem, 600, $primary, $shadow, $align: center);
   }
+}

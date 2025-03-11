@@ -3,13 +3,15 @@
 
 .container {
   @include flex(column, 2.5rem, center);
-  height: 660px;
+  height: fit-content;
+  padding-top: 4rem;
+  margin-bottom: 4rem;
 
   & .headings {
     @include flex(column, 0.5rem, center);
 
     & .name {
-      @include text(2.5rem, 3rem, 500, $white, $shadow);
+      @include text(2.5rem, 3rem, 500, $white, $shadow, $align: center);
     }
   }
   & .row {
@@ -45,3 +47,61 @@
     }
   }
 }
+
+@media (max-width: 1100px) {
+  .container {
+    & .row {
+      @include flex(column, 3rem, center, center);
+
+      & .block {
+        align-items: center;
+        & .badge {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .container {
+    & .row {
+      & .block {
+        & .list {
+          width: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    & .headings {
+      & .name {
+        @include text(2rem, 2.5rem, 500, $white, $shadow);
+      }
+    }
+    & .row {
+      & .image {
+        img {
+          height: 300px;
+        }
+      }
+      & .block {
+        & .list {
+          width: 300px;
+
+          & .item {
+            @include text(1rem, 1.25rem, 600, $white, $shadow);
+          }
+        }
+        & .badge {
+          width: 80%;
+          @include text(1rem, 1.25rem, 500, $primary, $align: center);
+        }
+      }
+    }
+  }
+}
+

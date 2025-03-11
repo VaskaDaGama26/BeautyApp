@@ -3,7 +3,9 @@
 
 .container {
   @include flex(column, 3rem, center);
-  height: 860px;
+  height: fit-content;
+  padding-top: 4rem;
+  margin-bottom: 6rem;
 
   & .row {
     @include flex(row, 6.25rem, stretch, center);
@@ -37,13 +39,13 @@
         @include text(1rem, 2rem, 400);
         padding: 0;
         & .item__black {
-            font-weight: 700;
+          font-weight: 700;
         }
       }
       & .list__sub {
         padding-left: 1rem;
         & .item__sub__black {
-            font-weight: 700;
+          font-weight: 700;
         }
       }
 
@@ -64,11 +66,45 @@
     }
 
     & .camp {
-        background-color: $primary;
+      background-color: $primary;
     }
     & .desert {
-        background-color: $secondary;
+      background-color: $secondary;
     }
+  }
+}
 
+@media (max-width: 1380px) {
+  .container {
+    & .row {
+      @include flex(column, 3rem, center);
+
+      & .plan {
+        width: 500px;
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    & .row {
+      & .plan {
+        width: 400px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) { 
+  .container {
+    & .row {
+      & .plan {
+        width: 300px;
+        & .list {
+          @include text(0.75rem, 1.5rem, 400);
+        }
+      }
+    }
   }
 }

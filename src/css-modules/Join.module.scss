@@ -3,7 +3,7 @@
 
 .container {
   max-width: 1440px;
-  height: 860px;
+  height: fit-content;
   margin: 0 auto;
   @include flex(column, 2rem, center, center);
   margin-bottom: 6rem;
@@ -35,6 +35,50 @@
       }
       & .highlight {
         color: $primary;
+      }
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .container {
+    & .row {
+      & .jointext {
+        @include text(2rem, 3rem, 500, $white, $shadow, $align: center);
+      }
+      & .list {
+        margin-top: 1rem;
+        & .item {
+          @include text(1.5rem, 2rem, 600, $white, $shadow, $align: left);
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    & .row {
+      & .list {
+        margin-inline: 1rem;
+        padding-inline: 1rem;
+      }
+    }
+  }
+}
+@media (max-width: 460px) {
+  .container {
+    & .row {
+      & .text__first {
+        @include text(1.25rem, 1.75rem, 800, $primary, $shadow, $align: center);
+      }
+      & .jointext {
+        @include text(1.5rem, 2.5rem, 500, $white, $shadow, $align: center);
+      }
+      & .list {
+        margin-top: 1rem;
+        & .item {
+          @include text(1rem, 1.5rem, 600, $white, $shadow, $align: left);
+        }
       }
     }
   }
