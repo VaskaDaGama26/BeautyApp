@@ -4,17 +4,17 @@ import classes from "../css-modules/Plans.module.scss";
 import Modal from "../UI/Modal";
 
 const Plans = () => {
+
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => {
     setShowModal(true);
-    document.body.classList.add('no-scroll');
-    
+    document.body.classList.add("no-scroll");
   };
 
   const closeModal = () => {
     setShowModal(false);
-    document.body.classList.remove('no-scroll');
+    document.body.classList.remove("no-scroll");
   };
 
   return (
@@ -27,7 +27,9 @@ const Plans = () => {
             <div className={classes.pricing}>
               <h2 className={classes.price}>6490 ₽</h2>
               <h3 className={classes.alert}>
-                стоимость с учетом скидки,<br />действует 24 часа после марафона
+                стоимость с учетом скидки,
+                <br />
+                действует 24 часа после марафона
               </h3>
             </div>
           </div>
@@ -53,7 +55,9 @@ const Plans = () => {
             </li>
             <li className={classes.item}>Есть рассрочка</li>
           </ul>
-          <button onClick={openModal} className={classes.button}>Купить</button>
+          <button onClick={openModal} className={classes.button}>
+            Купить
+          </button>
           <Modal show={showModal} onClose={closeModal} />
         </div>
         <div className={`${classes.plan} ${classes.desert}`}>
@@ -62,7 +66,9 @@ const Plans = () => {
             <div className={classes.pricing}>
               <h2 className={classes.price}>3990 ₽</h2>
               <h3 className={classes.alert}>
-                стоимость с учетом скидки,<br />действует 24 часа после марафона
+                стоимость с учетом скидки,
+                <br />
+                действует 24 часа после марафона
               </h3>
             </div>
           </div>
@@ -79,7 +85,9 @@ const Plans = () => {
             </li>
             <li className={classes.item}>Есть рассрочка</li>
           </ul>
-          <button onClick={openModal} className={classes.button}>Купить</button>
+          <button onClick={openModal} className={classes.button}>
+            Купить
+          </button>
           <Modal show={showModal} onClose={closeModal} />
         </div>
       </div>

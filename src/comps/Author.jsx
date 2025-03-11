@@ -3,6 +3,38 @@ import Heading from "../UI/Heading";
 import classes from "../css-modules/Author.module.scss";
 
 const Author = () => {
+  const listAuthor = [
+    {
+      id: 1,
+      text: "Разработала систему, которая позволила <span>3 раза собрать базу с нуля</span>",
+    },
+    {
+      id: 2,
+      text: "<span>Через 2 месяца</span> правильного ведения блога заработала первые 100 000 рублей как мастер",
+    },
+    {
+      id: 3,
+      text: "Разработала <span>авторскую методику</span> привлечения клиентов с Авито",
+    },
+    {
+      id: 4,
+      text: "<span>Набрала более 20000 подписчиков в блоге с нуля</span> бесплатно через Reels за 5 месяцев",
+    },
+    {
+      id: 5,
+      text: "<span>Собрала более 5000 бьюти-мастеров в своём телеграм канале</span> за 3 месяца",
+    },
+    {
+      id: 6,
+      text: "Полностью вышла в онлайн за<span> 2 месяца</span> ведения блога",
+    },
+  ];
+
+  // Функция для добавления класса highlight в теги span
+  const addHighlightClass = (htmlString) => {
+    return htmlString.replace(/<span>/g, `<span class=${classes.highlight}>`);
+  };
+
   return (
     <div className={classes.container}>
       <div className={classes.headings}>
@@ -16,24 +48,20 @@ const Author = () => {
         </div>
         <div className={classes.block}>
           <div className={classes.badge}>
-            Мастера с помощью моих инструментов<br /> увеличивают доход в 2-3 раза,
-            легко привлекают<br /> новых клиентов и переходят в онлайн
+            Мастера с помощью моих инструментов
+            <br /> увеличивают доход в 2-3 раза, легко привлекают
+            <br /> новых клиентов и переходят в онлайн
           </div>
           <ul className={classes.list}>
-            <li className={classes.item}>
-              Разработала систему, которая позволил <span className={classes.highlight}>3 раза собрать базу с нуля</span>
-            </li>
-            <li className={classes.item}>
-              <span className={classes.highlight}>Через 2 месяца</span> правильного видения блога заработала первые 100 000 рублей как мастер
-            </li>
-            <li className={classes.item}>Разработала <span className={classes.highlight}>авторскую методику</span> привлечения клиентов с Авито
-            </li>
-            <li className={classes.item}><span className={classes.highlight}> Набрала более 20000 подписчиков в блоге с нуля</span> бесплатно через Reels за 5 месяцев
-            </li>
-            <li className={classes.item}> <span className={classes.highlight}>Собрала более 5000 бьюти-мастеров в своём телеграм канале</span> за 3 месяца
-            </li>
-            <li className={classes.item}>Полностью вышла в онлайн за <span className={classes.highlight}>2 месяца</span> ведения блога
-            </li>
+            {listAuthor.map((item, index) => (
+              <li
+                key={index}
+                className={classes.item}
+                dangerouslySetInnerHTML={{
+                  __html: addHighlightClass(item.text),
+                }}
+              ></li>
+            ))}
           </ul>
         </div>
       </div>

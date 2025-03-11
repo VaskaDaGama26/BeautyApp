@@ -64,6 +64,7 @@
         @include text(0.75em, 1.25rem, 200, $textshadow: $shadow);
         &::before {
           @include text(2rem, 2rem, 600, $textshadow: $shadow, $align: center);
+          width: 58px;
         }
       }
     }
