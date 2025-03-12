@@ -29,7 +29,7 @@ const Plans = () => {
               <h3 className={classes.alert}>
                 стоимость с учетом скидки,
                 <br />
-                действует 24 часа после марафона
+                действует 24 часа после получения этой ссылки
               </h3>
             </div>
           </div>
@@ -58,7 +58,7 @@ const Plans = () => {
           <button onClick={openModal} className={classes.button}>
             Купить
           </button>
-          <Modal show={showModal} onClose={closeModal} />
+          <Modal show={showModal} onClose={closeModal} link='https://payform.ru/l76ExrC/' />
         </div>
         <div className={`${classes.plan} ${classes.desert}`}>
           <div className={classes.headings}>
@@ -68,7 +68,7 @@ const Plans = () => {
               <h3 className={classes.alert}>
                 стоимость с учетом скидки,
                 <br />
-                действует 24 часа после марафона
+                действует 24 часа после получения этой ссылки
               </h3>
             </div>
           </div>
@@ -88,7 +88,7 @@ const Plans = () => {
           <button onClick={openModal} className={classes.button}>
             Купить
           </button>
-          <Modal show={showModal} onClose={closeModal} />
+          <Modal show={showModal} onClose={closeModal} link="https://payform.ru/9m6Exlt/" />
         </div>
       </div>
     </div>

@@ -12,6 +12,7 @@ function App() {
 
   return (
     <>
+    <div className="background"></div>
     <Header />
     <Join />
     <Program />
