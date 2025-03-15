@@ -1,19 +1,31 @@
 import React, { useState } from "react";
 import Heading from "../UI/Heading";
 import classes from "../css-modules/Plans.module.scss";
-import Modal from "../UI/Modal";
+import ModalCamp from "../UI/ModalCamp";
+import ModalDesert from "../UI/ModalDesert";
 
 const Plans = () => {
 
-  const [showModal, setShowModal] = useState(false);
+  const [showModalDesert, setShowModalDesert] = useState(false);
+  const [showModalCamp, setShowModalCamp] = useState(false);
 
-  const openModal = () => {
-    setShowModal(true);
+  const openModalDesert = () => {
+    setShowModalDesert(true);
     document.body.classList.add("no-scroll");
   };
 
-  const closeModal = () => {
-    setShowModal(false);
+  const closeModalDesert = () => {
+    setShowModalDesert(false);
+    document.body.classList.remove("no-scroll");
+  };
+
+  const openModalCamp = () => {
+    setShowModalCamp(true);
+    document.body.classList.add("no-scroll");
+  };
+
+  const closeModalCamp = () => {
+    setShowModalCamp(false);
     document.body.classList.remove("no-scroll");
   };
 
@@ -55,10 +67,10 @@ const Plans = () => {
             </li>
             <li className={classes.item}>Есть рассрочка</li>
           </ul>
-          <button onClick={openModal} className={classes.button}>
+          <button onClick={openModalCamp} className={classes.button}>
             Купить
           </button>
-          <Modal show={showModal} onClose={closeModal} link='https://payform.ru/l76ExrC/' />
+          <ModalCamp show={showModalCamp} onClose={closeModalCamp} />
         </div>
         <div className={`${classes.plan} ${classes.desert}`}>
           <div className={classes.headings}>
@@ -85,10 +97,10 @@ const Plans = () => {
             </li>
             <li className={classes.item}>Есть рассрочка</li>
           </ul>
-          <button onClick={openModal} className={classes.button}>
+          <button onClick={openModalDesert} className={classes.button}>
             Купить
           </button>
-          <Modal show={showModal} onClose={closeModal} link="https://payform.ru/9m6Exlt/" />
+          <ModalDesert show={showModalDesert} onClose={closeModalDesert}/>
         </div>
       </div>
     </div>

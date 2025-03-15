@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classes from "./Modal.module.scss";
 
-const Modal = ({ show, onClose, link }) => {
+const ModalCamp = ({ show, onClose}) => {
   const [checkedItems, setCheckedItems] = useState({
     checkbox1: false,
     checkbox2: false,
@@ -97,7 +97,7 @@ const Modal = ({ show, onClose, link }) => {
           </label>
         </div>
         <div className={classes.modal_footer}>
-          <a href={link} target="_blank" rel="noopener noreferrer">
+          <a href="https://payform.ru/l76ExrC/" target="_blank" rel="noopener noreferrer">
             <button className={classes.button} disabled={!allChecked}>Перейти к оплате</button>
           </a>
         </div>
@@ -106,4 +106,4 @@ const Modal = ({ show, onClose, link }) => {
   );
 };
 
-export default Modal;
+export default ModalCamp;
