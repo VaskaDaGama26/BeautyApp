@@ -97,7 +97,7 @@ const ModalCamp = ({ show, onClose}) => {
           </label>
         </div>
         <div className={classes.modal_footer}>
-          <a href="https://payform.ru/l76ExrC/" target="_blank" rel="noopener noreferrer">
+          <a href="https://payform.ru/u46HduG/" target="_blank" rel="noopener noreferrer">
             <button className={classes.button} disabled={!allChecked}>Перейти к оплате</button>
           </a>
         </div>

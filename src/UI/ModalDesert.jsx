@@ -97,7 +97,7 @@ const ModalDesert = ({ show, onClose}) => {
           </label>
         </div>
         <div className={classes.modal_footer}>
-          <a href="https://payform.ru/9m6Exlt/" target="_blank" rel="noopener noreferrer">
+          <a href="https://payform.ru/se6HdtM/" target="_blank" rel="noopener noreferrer">
             <button className={classes.button} disabled={!allChecked}>Перейти к оплате</button>
           </a>
         </div>

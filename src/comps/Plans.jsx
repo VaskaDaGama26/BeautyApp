@@ -37,12 +37,7 @@ const Plans = () => {
           <div className={classes.headings}>
             <h1 className={classes.name}>Лагерь</h1>
             <div className={classes.pricing}>
-              <h2 className={classes.price}>6490 ₽</h2>
-              <h3 className={classes.alert}>
-                стоимость с учетом скидки,
-                <br />
-                действует 24 часа после получения этой ссылки
-              </h3>
+              <h2 className={classes.price}>6990 ₽</h2>
             </div>
           </div>
 
@@ -76,12 +71,7 @@ const Plans = () => {
           <div className={classes.headings}>
             <h1 className={classes.name}>Пустыня</h1>
             <div className={classes.pricing}>
-              <h2 className={classes.price}>3990 ₽</h2>
-              <h3 className={classes.alert}>
-                стоимость с учетом скидки,
-                <br />
-                действует 24 часа после получения этой ссылки
-              </h3>
+              <h2 className={classes.price}>4490 ₽</h2>
             </div>
           </div>
 
