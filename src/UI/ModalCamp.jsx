@@ -44,7 +44,7 @@ const ModalCamp = ({ show, onClose}) => {
         <div className={classes.modal_header}>
           <h2 className={classes.header}>Переходя к оплате:</h2>
           <img
-            src="/icons/close.svg"
+            src="/BeautyApp/icons/close.svg"
             alt="Закрыть"
             className={classes["close-icon"]}
             onClick={closeModal}

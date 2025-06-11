@@ -5,27 +5,31 @@ import aboutImg from "/images/aboutImg.png";
 
 const About = () => {
   const listItems = [
-    { id: 1, title: "Проходит в Telegram-канале", src: "/icons/place.svg" },
+    {
+      id: 1,
+      title: "Проходит в Telegram-канале",
+      src: "/BeautyApp/icons/place.svg",
+    },
     {
       id: 2,
       title: "Уроки в записи, продолжительность 15-30 минут",
-      src: "/icons/recording.svg",
+      src: "/BeautyApp/icons/recording.svg",
     },
     {
       id: 3,
       title:
         "Доступ к файлам: тариф «Пустыня» – 1 месяц, тариф «Лагерь» – 3 месяца",
-      src: "/icons/files.svg",
+      src: "/BeautyApp/icons/files.svg",
     },
     {
       id: 4,
       title: "Обратная связь до 1 месяца на тарифе «Лагерь»",
-      src: "/icons/feedback.svg",
+      src: "/BeautyApp/icons/feedback.svg",
     },
     {
       id: 5,
       title: "Оплата полностью или оформление беспроцентной рассрочки",
-      src: "/icons/payment.svg",
+      src: "/BeautyApp/icons/payment.svg",
     },
   ];
 

@@ -44,7 +44,7 @@ const Author = () => {
 
       <div className={classes.row}>
         <div className={classes.image}>
-          <img src="/images/author.png" alt="" />
+          <img src="/BeautyApp/images/author.png" alt="" />
         </div>
         <div className={classes.block}>
           <div className={classes.badge}>

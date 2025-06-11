@@ -5,25 +5,25 @@ import Heading from "../UI/Heading";
 const Review = () => {
   const data = [
     {
-      image: "/reviews/1.png",
+      image: "/BeautyApp/reviews/1.png",
     },
     {
-      image: "/reviews/2.png",
+      image: "/BeautyApp/reviews/2.png",
     },
     {
-      image: "/reviews/3.png",
+      image: "/BeautyApp/reviews/3.png",
     },
     {
-      image: "/reviews/4.png",
+      image: "/BeautyApp/reviews/4.png",
     },
     {
-      image: "/reviews/5.png",
+      image: "/BeautyApp/reviews/5.png",
     },
     {
-      image: "/reviews/6.png",
+      image: "/BeautyApp/reviews/6.png",
     },
     {
-      image: "/reviews/7.png",
+      image: "/BeautyApp/reviews/7.png",
     },
   ];
 
